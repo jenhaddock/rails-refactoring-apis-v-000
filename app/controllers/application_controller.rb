@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user
 
+  def githubservice
+  GithubService.new({ "access_token" => session[:token] })
+end
+
   private
 
     def authenticate_user

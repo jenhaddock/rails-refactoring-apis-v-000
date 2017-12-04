@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user
 
   def githubservice
-  GithubService.new({ "access_token" => session[:token] })
-end
+    GithubService.new({ "access_token" => session[:token] })
+  end
 
   private
 

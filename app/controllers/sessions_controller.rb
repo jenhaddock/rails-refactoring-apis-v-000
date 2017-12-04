@@ -7,5 +7,6 @@ class SessionsController < ApplicationController
     session[:token] = service.access_token
 
     session[:username] = service.get_username
+    redirect_to '/'
   end
 end
